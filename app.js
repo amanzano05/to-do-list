@@ -21,8 +21,7 @@ app.use(express.static("public"));
 //--------------database--------------------//
 //connect to the database. the other parameters are for aviod some errors
 //for local: "mongodb://localhost:27017/toDoList"
-//for remote: "mongodb+srv://amanzano05:Magooz85@apps.el2pr.mongodb.net/todoListDB"
-mongoose.connect("mongodb+srv://amanzano05:Magooz85@apps.el2pr.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+mongoose.connect("mongodb://localhost:27017/toDoList", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
 
 //schema for the to do list
 const itemsSchema = new mongoose.Schema({name: String});
